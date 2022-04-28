@@ -8,9 +8,9 @@ import Alert from './components/layout/Alert'
 
 function App() {
   return (
-    <GithubProvider>
-      <AlertProvider>
-        <Router>
+    <Router>
+      <GithubProvider>
+        <AlertProvider>
           <div className="flex flex-col justify-between h-screen">
             <Navbar />
             <main className="container mx-auto px-3">
@@ -19,9 +19,9 @@ function App() {
             </main>
             <Footer />
           </div>
-        </Router>
-      </AlertProvider>
-    </GithubProvider>
+        </AlertProvider>
+      </GithubProvider>
+    </Router>
   )
 }
 

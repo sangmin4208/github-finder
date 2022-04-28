@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { path } from '../../routes'
 
 function UserItem({ user }) {
   return (
@@ -16,7 +17,7 @@ function UserItem({ user }) {
           <h2 className="card-title">{user.login}</h2>
           <Link
             className="text-base-content text-opacity-80"
-            to={`/users/${user.login}`}
+            to={path.userProfile(user.login)}
           >
             Visit Profile
           </Link>
